@@ -1,0 +1,4 @@
+# Cấu hình benchmark truy xuất QASPER B1 đến B4.
+#
+# Khóa dataset revision, split, chunking, candidate budgets, tham số RRF,
+# seed và các giá trị k. Ghi điều kiện text evidence dùng để tính mẫu số.

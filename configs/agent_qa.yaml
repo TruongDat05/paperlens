@@ -1,0 +1,4 @@
+# Cấu hình đối chứng A1 và A2 trên QASPER.
+#
+# Khóa subset, seed, rubric, B4, phiên bản prompt/schema, ngân sách và Gemini
+# snapshot dùng chung. Đặt primary_only và tối đa 8 đoạn gốc mỗi lượt.

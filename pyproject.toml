@@ -1,0 +1,7 @@
+# Khai báo gói Python và công cụ kiểm tra của PaperLens.
+#
+# Khai báo phụ thuộc runtime cho backend và nhóm phụ thuộc cho benchmark và
+# kiểm thử. Khi đóng gói, dò namespace backend.app và research cùng các
+# package con, loại trừ thư mục tests.
+#
+# Chạy các điểm vào Python bằng module path từ repo root.

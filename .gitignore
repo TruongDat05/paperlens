@@ -1,0 +1,39 @@
+# Local configuration and credentials
+.env
+.env.*
+.env~
+!/.env.example
+/.aws/
+/.agents/
+/.codex/
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage*
+htmlcov/
+
+# Dependencies and build output
+node_modules/
+build/
+dist/
+coverage/
+
+# Local data, evaluation runs and databases
+/data/
+/artifacts/*
+!/artifacts/README.md
+*.sqlite*
+*.db
+*.db-*
+*.log
+
+# Local project documents
+/PaperLens_Arxiv_Paper.pdf
+/PaperLens_Research_Project_Plan.md
