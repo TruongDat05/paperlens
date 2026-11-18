@@ -1,6 +1,7 @@
 /**
- * Tiếp nhận message trên top frame của trang arXiv.
+ * Receive messages in the top frame of an arXiv page.
  *
- * Xác nhận document context trước khi gọi parser hoặc navigation. Trả thông
- * tin trang, các đoạn văn hoặc kết quả Jump qua message tương ứng.
+ * Verify the document context before calling the parser or navigation code.
+ * Return page information, paragraphs, or Jump results in the corresponding
+ * response.
  */

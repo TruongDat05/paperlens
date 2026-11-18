@@ -1,9 +1,10 @@
-"""Lưu paper, đoạn văn, chỉ mục và tiến độ ingest theo owner.
+"""Store papers, passages, indexes, and ingest progress by owner.
 
-Cấp dữ liệu nhất quán theo paper/version cho retrieval và agent. Gắn
-cache vector với owner, content hash, phiên bản parser/chunking và cấu
-hình embedding gồm model, snapshot và tiền tố.
+Provide consistent paper-version data for retrieval and agent runs. Key
+vector caches by owner, content hash, parser and chunking versions, and
+embedding configuration, including model, snapshot, and prefix.
 
-Lưu thời điểm truy cập và dọn paper/index hết hạn theo cấu hình. Phối
-hợp xóa dữ liệu dẫn xuất khi owner yêu cầu.
+Record access times and remove expired papers and indexes according to
+configuration. Coordinate deletion of derived data when the owner
+requests it.
 """

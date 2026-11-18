@@ -1,12 +1,13 @@
-"""Quản lý vòng đời và kết quả của agent run qua FastAPI.
+"""Manage agent run lifecycle and results through FastAPI.
 
-Lưu run theo owner, paper/version và request_id. Retry cùng nội dung trả
-run hiện có. Cùng request_id với nội dung khác trả lỗi xung đột.
+Store runs by owner, paper version, and request_id. A retry with the
+same payload returns the existing run. Reusing request_id with a
+different payload returns a conflict.
 
-Nạp paper và index trước khi chạy A1 hoặc A2. Ghi tiến trình cho polling
-và truyền yêu cầu hủy cùng deadline vào pipeline. Chỉ công bố kết quả
-nếu trạng thái hiện tại của run cho phép.
+Load the paper and index before running A1 or A2. Record progress for
+polling and pass cancellation and the deadline into the pipeline.
+Publish results only when the current run state allows it.
 
-Khi khởi động lại, kết thúc run bị gián đoạn và giữ usage chưa đối soát.
-Áp thời hạn lưu tối đa 24 giờ cho dữ liệu run theo cấu hình sản phẩm.
+On restart, end interrupted runs and retain unreconciled usage. Apply
+the product retention limit of at most 24 hours for run data.
 """

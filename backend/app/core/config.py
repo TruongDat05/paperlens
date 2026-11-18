@@ -1,11 +1,12 @@
-"""Nạp và kiểm tra cấu hình backend và benchmark.
+"""Load and validate backend and benchmark configuration.
 
-Tạo settings khi khởi động FastAPI hoặc CLI. Đọc cấu hình sản phẩm từ
-configs/product_mvp.yaml. Ở local, nạp thông tin kết nối từ .env ở thư mục
-gốc theo các tên biến trong .env.example. Trên host, lấy các biến tương
-ứng từ môi trường server. Kiểm tra credentials của provider được bật.
+Build settings when FastAPI or the CLI starts. Read product settings
+from configs/product_mvp.yaml. In local development, read connection
+settings from the root .env using the names in .env.example. In hosted
+environments, read the corresponding server environment variables.
+Validate credentials for enabled providers.
 
-CLI nạp cấu hình benchmark được chọn và chế độ live hoặc replay. Truyền
-settings của từng lần chạy vào pipeline và adapter để giữ cùng hành vi ở
-các điểm gọi.
+The CLI loads the selected benchmark configuration and live or replay
+mode. Pass the run settings to the pipeline and adapters for consistent
+behavior across callers.
 """

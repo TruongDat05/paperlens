@@ -1,6 +1,6 @@
-"""Chuẩn bị dữ liệu và manifest cho benchmark QASPER.
+"""Prepare benchmark data and a manifest for QASPER.
 
-Dùng research/datasets/qasper.py để xử lý v0.3 theo các split đã pin.
-Ghi revision, checksum, sample IDs, điều kiện loại mẫu và audit ánh xạ
-evidence.
+Use research/datasets/qasper.py to process v0.3 using the pinned splits.
+Record the revision, checksum, sample IDs, exclusion criteria, and
+evidence-mapping audit.
 """

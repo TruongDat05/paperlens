@@ -1,10 +1,9 @@
-"""Kiểm tra trực tiếp hợp đồng của hai alias LLM trên gateway.
+"""Verify the gateway contract for both LLM aliases directly.
 
-Dùng cấu hình gateway để kiểm tra generation, tool round trip, finish
-reason và usage riêng cho Gemini và Claude. Thử handoff với history và
-observations đã chuẩn hóa.
+Use gateway configuration to check generation, tool round trips, finish
+reasons, and usage separately for Gemini and Claude. Test handoff with
+normalized history and observations.
 
-Ghi bằng chứng đã bỏ thông tin xác thực vào
-docs/llm_gateway_contract.md. Kiểm tra lại qua llm_gateway.py khi
-adapter đã có.
+Record redacted evidence in docs/llm_gateway_contract.md. Retest through
+llm_gateway.py once the adapter is available.
 """

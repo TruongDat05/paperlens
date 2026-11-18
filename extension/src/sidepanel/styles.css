@@ -1,7 +1,7 @@
 /*
- * Định dạng giao diện side panel PaperLens.
+ * Style the PaperLens side panel.
  *
- * Quy định bố cục, kiểu chữ và các trạng thái tải, lỗi và focus. Làm rõ
- * evidence card được chọn qua citation và giữ focus dễ nhìn khi dùng bàn
- * phím.
+ * Define layout, typography, and loading, error, and focus states.
+ * Distinguish evidence cards selected through a citation and make keyboard
+ * focus visible.
  */

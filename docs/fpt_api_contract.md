@@ -1,10 +1,10 @@
-# Hợp đồng API FPT cho retrieval
+# FPT Retrieval API Contract
 
-Trạng thái **chờ kiểm chứng**. File triển khai tương ứng là `backend/app/providers/fpt.py`. Điểm kiểm chứng là `scripts/smoke_test_fpt.py`.
+Status **pending verification**. The implementation belongs in `backend/app/providers/fpt.py`. Verify the contract through `scripts/smoke_test_fpt.py`.
 
-| Vai trò | Model dự kiến | Bằng chứng cần ghi |
+| Role | Planned model | Evidence to record |
 | --- | --- | --- |
-| Embedding | `intfloat/multilingual-e5-large` | Model ID theo catalog, endpoint, schema, số chiều, số vector mỗi batch và cách báo usage |
-| Reranking | `BAAI/bge-reranker-v2-m3` | Model ID theo catalog, endpoint, schema cặp query–passage, thứ tự/score, batch và usage |
+| Embedding | `intfloat/multilingual-e5-large` | Catalog model ID, endpoint, schema, vector dimensions, vectors per batch, and usage reporting |
+| Reranking | `BAAI/bge-reranker-v2-m3` | Catalog model ID, endpoint, question-passage pair schema, ordering and scores, batching, and usage |
 
-Ghi cách xác thực, giới hạn kích thước, truncation, timeout, retry và lỗi theo từng endpoint. Ghi ngày kiểm chứng và mẫu request/response đã bỏ thông tin xác thực. Embedding smoke test đối chiếu prefix `query: ` và `passage: `. Reranking smoke test kiểm tra mapping scores về đúng passage từ một query và hai đoạn. [Kế hoạch v4.1, mục 6](../PaperLens_Research_Project_Plan.md#62-kiểm-chứng-fpt-retrieval-và-gateway-llm)
+Record authentication, size limits, truncation, timeouts, retries, and errors for each endpoint. Record the verification date and redact credentials from request and response examples. The embedding smoke test checks the `query: ` and `passage: ` prefixes. The reranking smoke test checks that scores map to the correct passages for one query and two passages. [v4.1 plan, section 6](../PaperLens_Research_Project_Plan.md#62-verify-fpt-retrieval-and-the-llm-gateway)

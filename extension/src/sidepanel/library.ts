@@ -1,10 +1,10 @@
 /**
- * Lưu lịch sử và ghi chú nguồn cục bộ trong Chrome.
+ * Store reading history and source notes locally in Chrome.
  *
- * Quản lý saved answers, saved evidence và history theo owner và
- * paper/version trong chrome.storage.local. Cung cấp thao tác lưu, xóa và
- * xuất Markdown.
+ * Manage saved answers, saved evidence, and history by owner and paper
+ * version in chrome.storage.local. Provide save, delete, and Markdown export
+ * actions.
  *
- * Giữ title, arXiv ID/version, section, link nguồn và ngày lưu. Gắn nhãn
- * riêng cho đoạn trích nguyên văn và phần giải thích do model tạo.
+ * Keep the title, arXiv ID and version, section, source link, and save date.
+ * Label verbatim quotes and model-generated explanations separately.
  */

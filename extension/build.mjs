@@ -1,10 +1,11 @@
 /**
- * Đóng gói Chrome Extension Manifest V3 bằng esbuild.
+ * Package the Manifest V3 Chrome Extension with esbuild.
  *
- * Tạo dist/background.js từ background/index.ts, dist/content.js từ
- * content/index.ts và dist/sidepanel/main.js từ sidepanel/main.tsx. Đóng gói
- * content script thành một bundle tự chứa.
+ * Build dist/background.js from background/index.ts, dist/content.js from
+ * content/index.ts, and dist/sidepanel/main.js from sidepanel/main.tsx.
+ * Package the content script as a self-contained bundle.
  *
- * Chép manifest, index.html và styles.css vào đường dẫn đã khai báo. Cấu hình
- * backend origin và quyền host tương ứng cho bản local hoặc public.
+ * Copy the manifest, index.html, and styles.css to their declared paths.
+ * Configure the backend origin and corresponding host permissions for local
+ * or public builds.
  */

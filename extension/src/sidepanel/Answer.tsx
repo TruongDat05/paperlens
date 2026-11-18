@@ -1,7 +1,7 @@
 /**
- * Hiển thị câu trả lời và liên kết tới evidence tương ứng.
+ * Display answers and link them to the corresponding evidence.
  *
- * Hiển thị answer blocks đã được backend kiểm tra theo trạng thái completed,
- * partial hoặc evidence_only. Nối evidence_ids với evidence cards và hiển thị
- * model thực tế, lý do fallback hoặc giới hạn khi có.
+ * Show backend-validated answer blocks for completed, partial, or
+ * evidence_only outcomes. Link evidence_ids to evidence cards and display
+ * the actual model, fallback reason, or limitations when available.
  */

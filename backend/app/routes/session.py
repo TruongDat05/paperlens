@@ -1,5 +1,5 @@
-"""Cung cấp GET /api/v1/session cho phiên hiện tại.
+"""Expose GET /api/v1/session for the current session.
 
-Lấy danh tính đã xác minh từ security.py và hạn mức còn lại từ
-limits.py. Trả dữ liệu cần hiển thị trong side panel của người dùng đó.
+Read the verified identity from security.py and the remaining quota from
+limits.py. Return the information needed by that user's side panel.
 """

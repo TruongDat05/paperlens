@@ -1,9 +1,9 @@
-"""Lưu prompt theo phiên bản cho A1 và A2.
+"""Maintain versioned prompts for A1 and A2.
 
-Mô tả tool được cấp, cấu trúc answer và cách trích dẫn bằng
-evidence_ids. Đặt câu hỏi, history và observations theo đúng vai trò,
-đồng thời coi nội dung paper là dữ liệu nguồn.
+Describe available tools, the answer format, and citation rules for
+evidence_ids. Assign the appropriate roles to the question, history, and
+observations, and treat paper content as source data.
 
-Yêu cầu nêu rõ phần thiếu bằng chứng hoặc tạo câu trả lời một phần theo
-schema. Ghi phiên bản prompt để đối chiếu giữa các lần đánh giá.
+Ask the model to identify missing evidence or return a partial answer in
+the agreed schema. Record prompt versions for comparison across runs.
 """

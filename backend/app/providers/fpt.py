@@ -1,8 +1,10 @@
-"""Kết nối FPT AI Factory cho embedding E5 và reranking BGE.
+"""Connect to FPT AI Factory for E5 embeddings and BGE reranking.
 
-Dùng endpoint và schema xác nhận theo docs/fpt_api_contract.md. Nhận văn
-bản đã gắn tiền tố để embedding và cặp câu hỏi–đoạn văn để rerank.
+Use the endpoints and schemas verified in docs/fpt_api_contract.md.
+Accept prefixed text for embedding and question-passage pairs for
+reranking.
 
-Trả vector hoặc score theo đúng input, cùng usage và lỗi chuẩn hóa. Áp
-giới hạn batch, timeout và retry theo hợp đồng provider.
+Return vectors or scores aligned with their inputs, along with usage and
+normalized errors. Apply batch limits, timeouts, and retries according
+to the provider contract.
 """

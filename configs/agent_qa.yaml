@@ -1,4 +1,5 @@
-# Cấu hình đối chứng A1 và A2 trên QASPER.
+# Configure the A1/A2 comparison on QASPER.
 #
-# Khóa subset, seed, rubric, B4, phiên bản prompt/schema, ngân sách và Gemini
-# snapshot dùng chung. Đặt primary_only và tối đa 8 đoạn gốc mỗi lượt.
+# Pin the shared subset, seed, rubric, B4 settings, prompt and schema
+# versions, budgets, and Gemini snapshot. Use primary_only and at most 8
+# original paragraphs per turn.

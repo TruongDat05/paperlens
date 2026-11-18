@@ -1,5 +1,5 @@
-"""Lập chỉ mục BM25 và xếp hạng đoạn trong một paper.
+"""Build a BM25 index and rank passages within one paper.
 
-Nhận các passage đã chunk và câu hỏi. Trả thứ hạng lexical để dùng cho
-B1, hợp nhất RRF và fallback BM25 của sản phẩm.
+Accept chunked passages and a question. Return the lexical ranking for
+B1, RRF fusion, and the product's BM25 fallback.
 """

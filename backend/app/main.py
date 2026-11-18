@@ -1,9 +1,9 @@
-"""Khởi tạo ứng dụng FastAPI của PaperLens.
+"""Initialize the PaperLens FastAPI application.
 
-Cung cấp ASGI app tại backend.app.main:app, gắn các router dưới /api/v1
-và phục vụ GET /api/v1/health.
+Expose the ASGI app at backend.app.main:app, mount routers under
+/api/v1, and serve GET /api/v1/health.
 
-Quản lý cấu hình, SQLite, kết nối provider và các tác vụ nền qua
-lifespan của một process. Khi khởi động lại, gọi ingest và runs để khôi
-phục trạng thái thuộc từng luồng.
+Manage configuration, SQLite, provider connections, and background tasks
+through the lifespan of a single process. On restart, let ingest and
+runs recover their respective state.
 """

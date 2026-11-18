@@ -1,9 +1,11 @@
-"""Cung cấp giao diện HTTP để bắt đầu, đọc và hủy agent run.
+"""Expose HTTP endpoints to start, inspect, and cancel agent runs.
 
-Đăng ký POST /api/v1/agent/runs, GET /api/v1/agent/runs/{run_id} và POST
-/api/v1/agent/runs/{run_id}/cancel. Xác thực owner và kiểm tra paper,
-question, history và request_id trước khi chuyển cho runs.py.
+Register POST /api/v1/agent/runs, GET /api/v1/agent/runs/{run_id}, and
+POST /api/v1/agent/runs/{run_id}/cancel. Authenticate the owner and
+validate the paper, question, history, and request_id before passing
+them to runs.py.
 
-Trả HTTP 202 và run_id khi bắt đầu. Poll trả tiến trình hoặc kết quả đã
-kiểm tra citation, cùng model phục vụ và thông tin fallback nếu có.
+Return HTTP 202 and run_id on start. Polling returns progress or a
+result with validated citations, the serving model, and fallback details
+when applicable.
 """

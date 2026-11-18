@@ -1,7 +1,7 @@
 /**
- * Đặc tả kiểm thử parser và định vị nguồn trên arXiv.
+ * Specify arXiv parser and source-navigation tests.
  *
- * Dùng HTML fixtures cho cây section, paragraph, version và link HTML từ
- * abstract. Bao phủ fingerprint khớp, document thay đổi, vị trí mơ hồ và
- * fallback về section.
+ * Use HTML fixtures for section trees, paragraphs, versions, and the HTML
+ * link from an abstract page. Cover matching fingerprints, changed
+ * documents, ambiguous locations, and section fallback.
  */

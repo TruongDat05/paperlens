@@ -1,9 +1,9 @@
-"""Quản lý evidence registry và xác minh ID trích dẫn.
+"""Maintain an evidence registry and validate citation IDs.
 
-Đăng ký các đoạn đã cung cấp cho model trong run hiện tại. Kiểm tra từng
-evidence_id theo registry, owner và paper/version trước khi công bố
-answer block.
+Register passages provided to the model in the current run. Validate
+each evidence_id against the registry, owner, and paper version before
+publishing its answer block.
 
-Lấy đoạn trích và locator từ passage nguồn đã đăng ký. Mức độ đoạn nguồn
-hỗ trợ phát biểu được đánh giá trong research/evaluation/qa_audit.py.
+Use quotes and locators from registered source passages. Evaluate how
+well passages support claims in research/evaluation/qa_audit.py.
 """

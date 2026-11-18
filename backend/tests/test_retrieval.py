@@ -1,8 +1,8 @@
-"""Đặc tả kiểm thử tính đúng của các cấu hình B1 đến B4.
+"""Specify correctness tests for retrieval configurations B1 to B4.
 
-Dùng câu hỏi, passages, vector và score xác định để kiểm tra thứ hạng
-RRF, rerank, định vị nguồn và gộp subchunks theo đoạn gốc.
+Use fixed questions, passages, vectors, and scores to check RRF and
+rerank order, source locations, and grouping by parent paragraph.
 
-Kiểm tra top-k theo cấu hình, BM25 fallback khi provider lỗi và mode
-được báo trong EvidenceResult.
+Check configured top-k, BM25 fallback on provider failure, and the mode
+reported in EvidenceResult.
 """

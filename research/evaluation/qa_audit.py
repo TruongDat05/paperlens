@@ -1,10 +1,10 @@
-"""Tổng hợp đánh giá câu trả lời và nguồn trích dẫn.
+"""Summarize the quality of answers and their cited sources.
 
-Áp rubric cho correctness, completeness, citation support, coverage và
-abstention trên subset đã khóa. Ghi citation validity dựa trên kiểm tra
-ID.
+Apply the rubric for correctness, completeness, citation support,
+coverage, and abstention on the frozen subset. Record citation validity
+from ID checks.
 
-Đối chiếu A1 và A2 trên cùng câu hỏi. Gắn nhận xét với evidence nguồn,
-model và run ID, đồng thời báo số lượt thành công, lỗi, usage và chi
-phí.
+Compare A1 and A2 on the same questions. Link observations to source
+evidence, the model, and the run ID, and report successes, errors,
+usage, and cost.
 """

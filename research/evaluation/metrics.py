@@ -1,10 +1,10 @@
-"""Tính chỉ số retrieval theo đoạn văn gốc.
+"""Calculate retrieval metrics at the original-paragraph level.
 
-Quy subchunk về parent trước khi tính Recall@5, Paragraph Evidence F1@5,
-MRR@10 và Candidate Recall@20. Chỉ tính mẫu có text evidence hợp lệ
-trong mẫu số retrieval.
+Map subchunks to parents before computing Recall@5, Paragraph Evidence
+F1@5, MRR@10, and Candidate Recall@20. Include only queries with valid
+text evidence in the retrieval denominator.
 
-Với Recall@5 và F1@5, lấy điểm cao nhất qua các reference sets hợp lệ
-rồi macro-average theo query. Ước tính khoảng tin cậy chênh lệch bằng
-paired bootstrap theo paper.
+For Recall@5 and F1@5, take the best score across valid reference sets
+and macro-average by query. Estimate confidence intervals for
+differences with paired bootstrap resampling by paper.
 """

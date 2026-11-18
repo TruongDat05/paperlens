@@ -1,13 +1,13 @@
-"""Cung cấp CLI đánh giá retrieval và agent trên QASPER.
+"""Expose the QASPER retrieval and agent evaluation CLI.
 
-Chạy từ repo root qua python -m research.evaluation.run_eval với cấu
-hình, split, pipeline B1–B4 hoặc A1/A2 và chế độ live hoặc replay được
-chọn tường minh.
+Run python -m research.evaluation.run_eval from the repository root with
+an explicit configuration, split, B1–B4 or A1/A2 pipeline, and live or
+replay mode.
 
-Nạp paper vào bộ nhớ rồi gọi trực tiếp chunking, retrieval và agent dùng
-chung. Cấp adapter theo chế độ chạy. Với đối chứng A1/A2 chính, khóa
-Gemini primary_only.
+Load each paper into memory and call the shared chunking, retrieval, and
+agent code directly. Supply adapters for the selected mode. Use Gemini
+primary_only for the main A1/A2 comparison.
 
-Ghi manifest, kết quả từng query, lỗi, usage và metric tables kèm thông
-tin để tái lập.
+Write the manifest, per-query results, errors, usage, and metric tables
+with enough information to reproduce the run.
 """

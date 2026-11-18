@@ -1,9 +1,9 @@
-"""Định nghĩa hợp đồng dữ liệu của agent và agent endpoints.
+"""Define data contracts for agent execution and HTTP endpoints.
 
-Mô tả action, observation, answer block gồm text và evidence_ids, trạng
-thái run và response HTTP. Dùng cấu trúc message và observation chung
-cho cả hai alias.
+Define actions, observations, answer blocks with text and evidence_ids,
+run states, and HTTP responses. Use shared message and observation
+formats across both model aliases.
 
-Ghi nhận metadata từng attempt, finish reason, lỗi và lý do dừng để
-controller, router và evaluator hiểu cùng một kết quả.
+Record per-attempt metadata, finish reasons, errors, and stop reasons so
+the controller, router, and evaluator interpret outcomes consistently.
 """

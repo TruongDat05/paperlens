@@ -1,10 +1,10 @@
-"""Chuẩn hóa giao tiếp với gateway cho các alias ag/*.
+"""Normalize gateway communication for ag/* model aliases.
 
-Nhận message, action và observation theo schema nội bộ. Chuyển sang
-native tool calls hoặc structured-action JSON đã kiểm chứng cho từng
-alias.
+Accept messages, actions, and observations in the internal schema.
+Convert them to native tool calls or structured-action JSON verified for
+each alias.
 
-Chuẩn hóa tool call ID, output, finish reason, usage và lỗi theo
-docs/llm_gateway_contract.md. Mỗi lần gọi adapter là một provider
-attempt. model_router.py quyết định chuyển model.
+Normalize tool call IDs, output, finish reasons, usage, and errors
+according to docs/llm_gateway_contract.md. Each adapter call is one
+provider attempt. model_router.py decides when to switch models.
 """

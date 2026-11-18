@@ -1,8 +1,9 @@
-"""Đặc tả kiểm thử protocol QASPER và replay.
+"""Specify tests for the QASPER protocol and replay.
 
-Dùng fixtures cho nhiều reference sets, duplicate parents, gold thiếu
-hoặc chỉ có bảng/hình và abstention. Kiểm tra mẫu số của từng metric.
+Use fixtures for multiple reference sets, duplicate parents, missing or
+table- or figure-only gold evidence, and abstention. Check the
+denominator for each metric.
 
-Xác minh replay từ artifact đúng hash, báo lỗi khi thiếu record và giữ
-cấu hình primary_only cho đối chứng A1/A2 chính.
+Verify replay against the correct artifact hashes, report missing
+records, and use primary_only for the main A1/A2 comparison.
 """

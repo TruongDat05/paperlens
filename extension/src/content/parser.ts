@@ -1,10 +1,11 @@
 /**
- * Đọc thông tin nguồn và đoạn văn từ DOM của arXiv.
+ * Read source metadata and paragraphs from the arXiv DOM.
  *
- * Phân loại trang HTML, abstract và trang chưa hỗ trợ. Với abstract, lấy link
- * HTML hiện diện trên trang. Báo rõ khi version chưa xác định.
+ * Identify HTML, abstract, and unsupported pages. For an abstract page, read
+ * the HTML link present on the page. Report when the version cannot be
+ * determined.
  *
- * Khi Analyze, trích title, canonical URL, version, cây section và paragraphs
- * theo thứ tự tài liệu. Gắn parser version và locator theo quy tắc
- * fingerprint dùng chung với navigation.ts.
+ * During Analyze, extract the title, canonical URL, version, section tree,
+ * and paragraphs in document order. Attach the parser version and locators
+ * using the fingerprint rules shared with navigation.ts.
  */

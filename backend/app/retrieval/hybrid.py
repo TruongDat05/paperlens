@@ -1,11 +1,11 @@
-"""Điều phối các cấu hình truy xuất B1 đến B4.
+"""Coordinate retrieval configurations B1 through B4.
 
-Nhận câu hỏi, chỉ mục của một paper và cấu hình. B1 dùng BM25, B2 dùng
-E5, B3 hợp nhất hai thứ hạng bằng RRF và B4 rerank ứng viên RRF bằng
-BGE.
+Accept a question, one paper's index, and configuration. B1 uses BM25,
+B2 uses E5, B3 fuses both rankings with RRF, and B4 reranks the fused
+candidates with BGE.
 
-Giữ thứ hạng trước rerank để đo Candidate Recall@20. Giữ hit tốt nhất
-cho mỗi parent_passage_id rồi lấy top-k đoạn gốc. Trả EvidenceResult
-cùng retrieval_mode và lý do fallback BM25 khi cấu hình sản phẩm cho
-phép.
+Keep the pre-rerank order for Candidate Recall@20. Keep the best hit for
+each parent_passage_id and return the top-k original paragraphs. Return
+EvidenceResult with retrieval_mode and the reason for a BM25 fallback
+when the product configuration allows it.
 """

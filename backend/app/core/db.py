@@ -1,10 +1,10 @@
-"""Quản lý kết nối, schema và giao dịch SQLite.
+"""Manage SQLite connections, schema, and transactions.
 
-Đặt cơ sở dữ liệu trên persistent volume. Khai báo khóa ngoại, ràng buộc
-duy nhất theo owner và giao dịch cho các lần cập nhật trạng thái, chỉ
-mục và ngân sách.
+Place the database on a persistent volume. Define foreign keys,
+owner-scoped uniqueness constraints, and transactions for state, index,
+and budget updates.
 
-Giữ giao dịch quanh các thao tác đọc và ghi ngắn. Các lời gọi provider
-diễn ra ngoài giao dịch, với kết quả được commit khi tài nguyên vẫn hợp
-lệ.
+Keep read and write transactions short. Make provider calls outside
+transactions and commit the results while the associated resources
+remain valid.
 """

@@ -1,10 +1,11 @@
-"""Tiếp nhận paper arXiv và điều phối lập chỉ mục.
+"""Accept arXiv papers and coordinate indexing.
 
-Nhận các đoạn văn do người dùng đồng ý gửi. Kiểm tra nguồn arXiv, phiên
-bản, cấu trúc và hạn mức đầu vào rồi tính content hash tại server. Cùng
-owner, nội dung và cấu hình lập chỉ mục dùng lại cùng paper_id.
+Accept paragraphs the user has consented to send. Validate the arXiv
+source, version, structure, and input limits, then compute the content
+hash on the server. Reuse paper_id for the same owner, content, and
+index configuration.
 
-Chia đoạn qua chunking.py và dựng BM25 để đạt lexical_ready. Ghi tiến độ
-embedding theo batch và chỉ đặt semantic_ready khi bộ vector tương ứng
-đã được lưu đầy đủ.
+Chunk paragraphs with chunking.py and build BM25 to reach lexical_ready.
+Track embedding progress by batch and set semantic_ready once all
+matching vectors are stored.
 """

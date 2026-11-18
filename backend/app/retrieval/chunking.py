@@ -1,9 +1,10 @@
-"""Chia đoạn văn dài và giữ liên kết với đoạn nguồn.
+"""Split long paragraphs while preserving their source lineage.
 
-Nhận các đoạn văn arXiv hoặc QASPER cùng tokenizer E5 đã pin. Áp ngân
-sách khoảng 400 token tính cả tiền tố và chừa chỗ cho special tokens.
+Accept arXiv or QASPER paragraphs and a pinned E5 tokenizer. Target
+about 400 tokens including the prefix, with room for special tokens.
 
-Tạo subchunk ID và text offsets xác định, đồng thời giữ
-parent_passage_id để quy kết quả và nhãn đánh giá về cùng đoạn gốc. Khi
-replay, dùng tài nguyên tokenizer đã có trên máy.
+Assign deterministic subchunk IDs and text offsets. Keep
+parent_passage_id so results and evaluation labels map to the same
+original paragraph. For replay, use tokenizer resources already
+available locally.
 """

@@ -1,8 +1,9 @@
-"""Xác thực phiên và xác lập phạm vi dữ liệu của owner.
+"""Authenticate sessions and establish owner scope.
 
-Đối chiếu token beta với hash lưu trên server hoặc xác minh access token
-của dịch vụ đăng nhập khi tích hợp. Cấp owner từ danh tính đã xác thực.
+Verify a beta token against its server-side hash or verify an access
+token with the integrated identity provider. Derive the owner from the
+authenticated identity.
 
-Dùng owner do server cấp để kiểm tra quyền truy cập paper, cache và run.
-Chính sách origin của extension thuộc cấu hình HTTP.
+Use the server-assigned owner to authorize access to papers, caches, and
+runs. The extension origin policy belongs to HTTP configuration.
 """

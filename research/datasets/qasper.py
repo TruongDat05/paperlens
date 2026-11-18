@@ -1,9 +1,10 @@
-"""Nạp QASPER v0.3 và ánh xạ evidence tới đoạn văn gốc.
+"""Load QASPER v0.3 and map evidence to original paragraphs.
 
-Kiểm tra dataset revision, checksum và official splits từ manifest.
-Chuyển mỗi paper sang Paper và Passage dùng chung với backend.
+Verify the dataset revision, checksum, and official splits from the
+manifest. Convert each paper to the shared Paper and Passage types.
 
-Giữ EvidenceLabel và từng reference set hợp lệ cho evaluator.
-Ghi nhận evidence trùng, không ánh xạ được hoặc chỉ có bảng/hình.
-Xác định các tập text evidence và abstention theo kế hoạch v4.1.
+Keep EvidenceLabel and each valid reference set for the evaluator.
+Record ambiguous repeated evidence, unmapped evidence, and table- or
+figure-only evidence. Define the text-evidence and abstention subsets
+according to the v4.1 plan.
 """

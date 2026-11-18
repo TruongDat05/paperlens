@@ -1,9 +1,10 @@
 /**
- * Gửi các yêu cầu HTTP từ side panel tới FastAPI.
+ * Send HTTP requests from the side panel to FastAPI.
  *
- * Dùng backend origin của bản build và token phiên hiện tại. Hỗ trợ hủy fetch
- * và giữ request_id khi gửi lại cùng thao tác.
+ * Use the backend origin for the current build and the current session
+ * token. Support aborting fetches and reuse request_id when retrying the
+ * same operation.
  *
- * Chuẩn hóa lỗi offline, xác thực, quota và provider để UI hiển thị đúng
- * trạng thái.
+ * Normalize offline, authentication, quota, and provider errors for display
+ * in the UI.
  */

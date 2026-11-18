@@ -1,6 +1,6 @@
 /**
- * Đăng ký hành vi mở side panel của Chrome Extension.
+ * Register how the Chrome Extension opens its side panel.
  *
- * Thiết lập thao tác mở panel từ icon toolbar trong vòng đời service worker.
- * Vòng đời tác vụ lập chỉ mục và lượt hỏi thuộc FastAPI.
+ * Configure the toolbar icon to open the panel during the service worker
+ * lifecycle. FastAPI owns the lifecycle of indexing jobs and question runs.
  */

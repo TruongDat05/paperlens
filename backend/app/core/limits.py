@@ -1,9 +1,9 @@
-"""Thực thi hạn mức đầu vào, quota và ngân sách inference.
+"""Enforce input limits, quotas, and inference budgets.
 
-Kiểm tra kích thước paper, câu hỏi và history. Áp rate limit, giới hạn
-đồng thời và quota theo chính sách sản phẩm.
+Check the size of the paper, question, and history. Enforce rate,
+concurrency, and quota limits from the product policy.
 
-Giữ chỗ ngân sách bằng giao dịch trước khi gọi FPT hoặc gateway, kể cả
-search trong agent. Đối soát theo usage từng attempt và giữ trạng thái
-unknown khi chưa xác định chi phí.
+Reserve budget in a transaction before calling FPT or the gateway,
+including agent searches. Reconcile usage per attempt and retain unknown
+status when the cost cannot be determined.
 """

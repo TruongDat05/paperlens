@@ -1,8 +1,10 @@
-"""Thực hiện A1, luồng trả lời từ một lần truy xuất.
+"""Implement A1, the single-pass retrieval and answer flow.
 
-Trong benchmark, lấy tối đa 8 đoạn gốc từ một lần chạy B4. Bản alpha lấy
-evidence theo cấu hình sản phẩm. Đưa các đoạn đã chọn vào cùng evidence
-registry, router và schema answer như A2.
+In the benchmark, retrieve at most 8 original paragraphs from one B4
+pass. The product alpha retrieves evidence according to its
+configuration. Use the same evidence registry, model router, and answer
+schema as A2.
 
-Trả kết quả đã kiểm tra citation cùng metadata để so sánh A1 với A2.
+Return a citation-validated result and metadata for the A1/A2
+comparison.
 """

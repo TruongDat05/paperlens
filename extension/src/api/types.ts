@@ -1,7 +1,8 @@
 /**
- * Định nghĩa dữ liệu HTTP giữa side panel và FastAPI.
+ * Define HTTP data shared by the side panel and FastAPI.
  *
- * Mô tả request và response của session, ingest, paper status, retrieve,
- * agent run, cancel và delete theo schema backend. Giữ nguyên evidence IDs,
- * source location, index status, answer mode và metadata model.
+ * Describe requests and responses for session, ingest, paper status,
+ * retrieve, agent runs, cancellation, and deletion according to backend
+ * schemas. Preserve evidence IDs, source locations, index status, answer
+ * mode, and model metadata.
  */

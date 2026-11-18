@@ -1,10 +1,10 @@
 /**
- * Xác minh đoạn nguồn và cuộn tới vị trí trích dẫn.
+ * Verify the source paragraph and scroll to the citation.
  *
- * Sở hữu quy tắc chuẩn hóa văn bản và tính fingerprint dùng chung khi parse
- * và Jump. Kiểm tra document/version và đối chiếu fingerprint khi giải
- * element ID hoặc selector do parser xác lập.
+ * Define the text-normalization and fingerprinting rules shared by parsing
+ * and Jump. Verify the document and version, then check the fingerprint when
+ * resolving an element ID or a selector produced by the parser.
  *
- * Chỉ tô sáng đoạn đã xác minh. Khi vị trí không còn khớp hoặc mơ hồ, trả
- * link section đã xác nhận nếu có.
+ * Highlight only a verified paragraph. When the location is stale or
+ * ambiguous, return a verified section link if available.
  */

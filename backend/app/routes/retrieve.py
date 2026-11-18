@@ -1,10 +1,10 @@
-"""Cung cấp POST /api/v1/retrieve cho Evidence Mode.
+"""Expose POST /api/v1/retrieve for Evidence Mode.
 
-Xác thực owner và quyền trên paper_id. Kiểm tra câu hỏi, top-k và mức
-sẵn sàng của chỉ mục trước khi chuyển paper và index đã nạp cho
-retrieval engine.
+Authenticate the owner and check access to paper_id. Validate the
+question, top-k, and index readiness before passing the loaded paper and
+index to the retrieval engine.
 
-Trả EvidenceResult với đoạn nguồn, thứ hạng, retrieval_mode và
-fallback_reason nếu có. Trả trạng thái phù hợp khi paper còn đang lập
-chỉ mục để side panel tiếp tục poll.
+Return EvidenceResult with source passages, ranks, retrieval_mode, and
+fallback_reason when applicable. Return the appropriate status while
+indexing is in progress so the side panel can keep polling.
 """

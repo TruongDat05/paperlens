@@ -1,7 +1,7 @@
 /**
- * Hiển thị bằng chứng và thao tác mở hoặc lưu nguồn.
+ * Show evidence and actions to open or save its source.
  *
- * Hiển thị đoạn trích, section, version và thứ hạng từ EvidenceResult. Chuyển
- * thao tác Jump và Save qua callback của side panel rồi hiển thị kết quả định
- * vị hoặc link section.
+ * Display the quote, section, version, and rank from EvidenceResult.
+ * Delegate Jump and Save through side panel callbacks, then show the
+ * resolved location or section link.
  */

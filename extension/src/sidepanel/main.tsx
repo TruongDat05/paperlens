@@ -1,6 +1,6 @@
 /**
- * Khởi tạo React trong trang side panel.
+ * Initialize React on the side panel page.
  *
- * Gắn App vào phần tử root của index.html. App điều phối trạng thái hiển thị
- * và thao tác trên paper.
+ * Mount App in the root element of index.html. App manages presentation
+ * state and interactions with the paper.
  */

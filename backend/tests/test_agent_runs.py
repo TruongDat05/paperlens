@@ -1,9 +1,9 @@
-"""Đặc tả kiểm thử vòng đời và tính toàn vẹn của agent run.
+"""Specify tests for the agent run lifecycle and result integrity.
 
-Bao phủ quyền sở hữu, request_id trùng, yêu cầu hủy, deadline và
-response đến muộn. Giả lập lỗi Gemini, chuyển model một lần, giữ Claude
-đến hết lượt và lỗi cả hai model.
+Cover ownership, duplicate request_id, cancellation, deadlines, and late
+responses. Simulate Gemini failure, one failover, continued use of
+Claude until the turn ends, and failure of both models.
 
-Kiểm tra usage chưa rõ, action ngoài phạm vi và citation IDs không thuộc
-evidence registry.
+Check unknown usage, out-of-scope actions, and citation IDs missing from
+the evidence registry.
 """

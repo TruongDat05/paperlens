@@ -1,10 +1,11 @@
-"""Cung cấp các endpoint quản lý paper của người dùng.
+"""Expose endpoints for managing a user's papers.
 
-Đăng ký POST /api/v1/papers/ingest, GET /api/v1/papers/{paper_id}/status
-và DELETE /api/v1/papers/{paper_id}. Lấy owner từ phiên đã xác thực. Trả
-HTTP 202 cùng paper_id và index_status khi ingest còn chạy.
+Register POST /api/v1/papers/ingest, GET
+/api/v1/papers/{paper_id}/status, and DELETE /api/v1/papers/{paper_id}.
+Derive the owner from the authenticated session. Return HTTP 202 with
+paper_id and index_status while ingestion is in progress.
 
-Chuyển ingest và status sang module nghiệp vụ tương ứng. Khi xóa, phối
-hợp thu hồi paper, chỉ mục, run liên quan và chặn tác vụ cũ ghi lại dữ
-liệu.
+Delegate ingestion and status lookup to their respective modules. On
+deletion, remove the paper, index, and related runs, and prevent pending
+tasks from writing the data back.
 """

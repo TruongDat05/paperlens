@@ -1,9 +1,9 @@
-"""Ghi số liệu vận hành cho các giai đoạn và lần gọi provider.
+"""Record operational metrics by stage and provider attempt.
 
-Ghi thời gian theo stage, cache hit, model, lỗi, token và chi phí. Phân
-biệt usage do provider báo, usage ước tính và usage chưa xác định của
-attempt bị timeout hoặc hủy.
+Record stage latency, cache hits, models, errors, tokens, and costs.
+Distinguish provider-reported usage, estimates, and unknown usage from
+attempts that timed out or were canceled.
 
-Ghi model phục vụ và lý do fallback theo run. Giới hạn log sản phẩm ở
-metadata cần vận hành.
+Record the serving model and fallback reason per run. Limit product logs
+to metadata needed for operations.
 """

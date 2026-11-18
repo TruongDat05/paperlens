@@ -1,10 +1,10 @@
-# Hợp đồng API gateway cho agent
+# Agent Gateway API Contract
 
-Trạng thái **chờ kiểm chứng**. `backend/app/providers/llm_gateway.py` chuẩn hóa giao tiếp với gateway. `backend/app/agent/model_router.py` áp chính sách chuyển model. Điểm kiểm chứng là `scripts/smoke_test_llm_gateway.py`.
+Status **pending verification**. `backend/app/providers/llm_gateway.py` normalizes gateway communication. `backend/app/agent/model_router.py` applies the model-switching policy. Verify the contract through `scripts/smoke_test_llm_gateway.py`.
 
-| Vai trò | Alias cấu hình | Bằng chứng cần ghi |
+| Role | Configured alias | Evidence to record |
 | --- | --- | --- |
-| Primary | `ag/gemini-3.8-flash-medium` | Generation, finish reason, structured output, tool round trip và usage |
-| Fallback | `ag/claude-sonnet-4-6` | Cùng bộ kiểm chứng, thêm handoff từ Gemini với observations đã chuẩn hóa |
+| Primary | `ag/gemini-3.8-flash-medium` | Generation, finish reason, structured output, tool round trip, and usage |
+| Fallback | `ag/claude-sonnet-4-6` | The same checks, plus handoff from Gemini with normalized observations |
 
-Ghi base URL, auth, giao thức theo từng alias, timeout/error taxonomy, token/usage fields, quota, billing và khả năng truy cập từ backend đã host. Mỗi alias cần lượt kiểm chứng tool action → observation → final answer và mapping tool call ID. Chọn native tool calls hoặc structured-action JSON theo khả năng thực nghiệm của alias. Handoff giữ lịch sử portable và evidence IDs của turn. Ghi chi phí có thể chưa xác định khi timeout và mẫu đã bỏ thông tin xác thực. [Kế hoạch v4.1, mục 6](../PaperLens_Research_Project_Plan.md#62-kiểm-chứng-fpt-retrieval-và-gateway-llm)
+Record the base URL, authentication, protocol per alias, timeout and error categories, token and usage fields, quotas, billing, and reachability from the hosted backend. Verify a tool action → observation → final answer round trip and tool call ID mapping for each alias. Choose native tool calls or structured-action JSON based on the alias's tested capabilities. Preserve portable history and the turn's evidence IDs at handoff. Record potentially unknown charges after a timeout and redact credentials from examples. [v4.1 plan, section 6](../PaperLens_Research_Project_Plan.md#62-verify-fpt-retrieval-and-the-llm-gateway)

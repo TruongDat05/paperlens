@@ -1,6 +1,6 @@
-"""Xuất bảng từ các lần đánh giá đã được định danh.
+"""Export tables from identified evaluation runs.
 
-Đọc metric outputs và manifest của từng run được chọn rồi ghi bảng vào
-reports/tables. Giữ split, cỡ mẫu, lỗi, routing và chế độ live/replay để
-truy vết.
+Read metric outputs and manifests for the selected runs and write tables
+to reports/tables. Keep the split, sample size, errors, routing, and
+live or replay mode for traceability.
 """

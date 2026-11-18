@@ -1,9 +1,9 @@
-"""Tạo vector E5 và truy xuất theo độ tương đồng trong paper.
+"""Create E5 vectors and retrieve similar passages within one paper.
 
-Gắn tiền tố "passage: " khi tạo vector đoạn văn và "query: " khi tạo
-vector câu hỏi. Dùng chung quy tắc này cho sản phẩm và benchmark.
+Use the "passage: " prefix for paragraph embeddings and "query: " for
+question embeddings. Apply the same rules in the product and benchmark.
 
-Kiểm tra số chiều và model snapshot của vector. Xếp hạng theo cosine
-hoặc tích vô hướng trên vector đã chuẩn hóa, rồi trả các ứng viên của
-paper đã nạp.
+Check vector dimensions and model snapshots. Rank candidates by cosine
+similarity or dot product on normalized vectors and return candidates
+from the loaded paper.
 """

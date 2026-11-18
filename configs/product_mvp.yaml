@@ -1,6 +1,8 @@
-# Cấu hình mặc định của sản phẩm PaperLens.
+# Define the default PaperLens product configuration.
 #
-# Khai báo B4 với top 5 đoạn gốc, fallback BM25 và A2. Đặt hạn mức ingest,
-# retrieval, turn, quota và retention theo kế hoạch v4.1.
+# Configure B4 with the top 5 original paragraphs, BM25 fallback, and A2.
+# Set ingestion, retrieval, turn, quota, and retention limits according to
+# the v4.1 plan.
 #
-# core/config.py nạp thông tin kết nối và credentials từ môi trường server.
+# core/config.py loads connection information and credentials from the
+# server environment.

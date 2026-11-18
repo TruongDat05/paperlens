@@ -1,8 +1,9 @@
-"""Nạp artifacts để chạy lại pipeline ở chế độ offline.
+"""Load artifacts to replay the pipeline offline.
 
-Kiểm tra manifest và checksum, nạp tokenizer E5 đã pin trên máy rồi cấp
-adapter đọc embeddings, scores và phản hồi LLM đã lưu.
+Verify the manifest and checksums, load the pinned local E5 tokenizer,
+and supply adapters that read recorded embeddings, scores, and LLM
+responses.
 
-Khớp record theo input, cấu hình và snapshot của run. Báo lỗi khi record
-thiếu hoặc sai phiên bản và gắn mode replay vào kết quả.
+Match records by run inputs, configuration, and snapshot. Report missing
+records or version mismatches and label the results as replay.
 """

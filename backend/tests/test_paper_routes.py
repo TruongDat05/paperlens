@@ -1,8 +1,8 @@
-"""Đặc tả kiểm thử ingest, trạng thái và xóa paper.
+"""Specify tests for paper ingestion, status, and deletion.
 
-Dùng SQLite cục bộ và adapter giả lập để kiểm tra quyền sở hữu, giới hạn
-đầu vào, ingest lặp và hai mốc lexical_ready, semantic_ready.
+Use local SQLite and fake adapters to test ownership, input limits,
+repeated ingestion, and the lexical_ready and semantic_ready states.
 
-Bao phủ batch embedding bị gián đoạn khi restart và yêu cầu xóa paper
-khi tác vụ còn chạy.
+Cover embedding batches interrupted by a restart and paper deletion
+while a task is still running.
 """

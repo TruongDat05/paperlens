@@ -1,13 +1,13 @@
-"""Điều phối vòng lặp A2 cho một lượt hỏi trên paper.
+"""Coordinate the A2 loop for one question about a paper.
 
-Nhận câu hỏi, history hợp lệ và paper đã nạp. Gọi router để lấy action
-hoặc answer, xác thực action trước khi gọi tool rồi đưa observation đã
-kiểm tra vào evidence registry.
+Accept a question, valid history, and a loaded paper. Ask the model
+router for an action or answer, validate each action before dispatch,
+and add verified observations to the evidence registry.
 
-Áp giới hạn bước, tool calls, lần search, token và thời gian của cả lượt
-theo settings. Chặn action trùng, dành bước cuối cho answer và kiểm tra
-yêu cầu hủy giữa các bước.
+Enforce the configured step, tool call, search, token, and time limits
+across the turn. Block duplicate actions, reserve the last step for the
+answer, and check for cancellation between steps.
 
-Trả answer hợp lệ, partial hoặc evidence_only theo bằng chứng còn dùng
-được và lý do dừng.
+Return a validated answer, partial, or evidence_only based on the
+available evidence and stop reason.
 """

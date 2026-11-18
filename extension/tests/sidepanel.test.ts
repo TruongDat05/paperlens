@@ -1,7 +1,7 @@
 /**
- * Đặc tả kiểm thử các luồng chính của side panel.
+ * Specify tests for the main side panel workflows.
  *
- * Kiểm tra consent trước ingest, đổi tab/document/version và response cũ. Bao
- * phủ bắt đầu, poll, hủy và phục hồi run, cùng lưu, xóa và xuất Markdown giữ
- * đúng nguồn.
+ * Check consent before ingest, changes to the tab, document, or version, and
+ * stale responses. Cover starting, polling, canceling, and recovering runs,
+ * as well as saving, deleting, and exporting Markdown with accurate sources.
  */

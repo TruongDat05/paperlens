@@ -1,10 +1,10 @@
 /**
- * Quản lý lượt hỏi và Evidence Mode trong side panel.
+ * Manage question runs and Evidence Mode in the side panel.
  *
- * Gửi Ask hoặc follow-up với tối đa 3 lượt history của cùng paper/version.
- * Quản lý request_id, run_id, polling, hủy và phục hồi polling từ
- * chrome.storage.session trong phiên hiện tại.
+ * Send Ask or a follow-up with at most 3 history turns for the same paper
+ * version. Manage request_id, run_id, polling, cancellation, and polling
+ * recovery from chrome.storage.session within the current session.
  *
- * Chỉ áp response khớp owner, tab, document và lượt hỏi đang theo dõi. Dùng
- * retrieve endpoint cho luồng trả trực tiếp evidence.
+ * Apply responses only when they match the owner, tab, document, and active
+ * run. Use the retrieve endpoint for direct evidence results.
  */
