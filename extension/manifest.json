@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "PaperLens",
+  "version": "0.1.1",
+  "description": "Evidence-grounded research assistant for ML/NLP papers",
+  "permissions": [
+    "sidePanel",
+    "storage",
+    "tabs",
+    "activeTab",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://arxiv.org/html/*",
+    "https://arxiv.org/abs/*",
+    "http://127.0.0.1:8000/*",
+    "http://localhost:8000/*"
+  ],
+  "background": {
+    "service_worker": "dist/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://arxiv.org/html/*",
+        "https://arxiv.org/abs/*"
+      ],
+      "js": [
+        "dist/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "PaperLens"
+  },
+  "side_panel": {
+    "default_path": "dist/sidepanel/index.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "dist/sidepanel/index.html",
+        "dist/sidepanel/main.js",
+        "dist/sidepanel/styles.css"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

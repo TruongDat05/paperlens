@@ -1,6 +1,14 @@
-<!--
-Declare the side panel page that Chrome loads from the manifest.
-
-Provide an element with the ID root for mounting React. Reference main.js
-and styles.css next to the page in the packaged extension.
--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PaperLens</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="katex.min.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
