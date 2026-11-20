@@ -1,11 +1,21 @@
-# Local configuration and credentials
+# Local configuration and credentials; keep shareable templates
 .env
 .env.*
 .env~
-!/.env.example
+!.env.example
+!.env.*.example
+!.env.template
+!.env.*.template
+*.pem
+*.key
+*.p12
+*.pfx
 /.aws/
-/.agents/
-/.codex/
+/.ssh/
+/credentials*.json
+/client_secret*.json
+/service-account*.json
+/token.json
 
 # Python environments and caches
 .venv/
@@ -16,6 +26,9 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.tox/
+.nox/
+.ipynb_checkpoints/
 .coverage*
 htmlcov/
 
@@ -24,16 +37,98 @@ node_modules/
 build/
 dist/
 coverage/
+.vite/
+.vitest/
+*.tsbuildinfo
+.eslintcache
+/extension/*.zip
+/extension/*.crx
 
 # Local data, evaluation runs and databases
 /data/
 /artifacts/*
 !/artifacts/README.md
-*.sqlite*
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.sqlite3-*
 *.db
 *.db-*
 *.log
+*.log.*
+
+# Downloaded browsers, disposable profiles and browser-test output
+/chrome/
+/chromium/
+/chrome-for-testing/
+/browser-profiles/
+/chrome-profile*/
+/puppeteer-profile*/
+.auth/
+/test-results/
+/playwright-report/
+/blob-report/
+
+# Agent drafts, plans, specifications and reports stay local, including Markdown
+/docs/superpowers/
+/docs/agents/
+/docs/plans/
+/docs/specs/
+/docs/reports/
+/docs/drafts/
+/docs/notes/
+/docs/progress_log.md
+/docs/browser_walkthroughs.md
+/plans/
+/specs/
+/reports/
+/drafts/
+/notes/
+/.scratch/
+/scratch/
+/.planning/
+/PLAN.md
+/plan.md
+/SPEC.md
+/spec.md
+/TASKS.md
+/tasks.md
+/task.md
+/NOTES.md
+/notes.md
+/implementation_plan.md
+/walkthrough.md
 
 # Local project documents
 /PaperLens_Arxiv_Paper.pdf
 /PaperLens_Research_Project_Plan.md
+/PaperLens_Agent_Implementation_Plan.md
+
+# Editor/OS state, caches and temporary files
+.idea/
+.vscode/
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+.cache/
+/tmp/
+/temp/
+/.tmp/
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*.swp
+*.swo
+*~
+
+# Local worktrees and agent session metadata
+/.worktrees
+/worktrees
+/.agents/
+/.codex/
+/.gemini/
+/.claude/
+/.superpowers/
