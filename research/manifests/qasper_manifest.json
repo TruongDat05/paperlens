@@ -1,0 +1,26 @@
+{
+  "dataset": "allenai/qasper",
+  "version": "0.3.0",
+  "git_revision": "006d967a57a550974051a8f9a3ba0814bb653456",
+  "source_archive": "qasper-train-dev-v0.3.tgz",
+  "sha256": "3e9c4033235b6f706e236130cbfa40d993309a4d8050811e5fa016b8014561ae",
+  "splits": {
+    "train": {
+      "papers": 888,
+      "questions": 2585
+    },
+    "dev": {
+      "papers": 281,
+      "questions": 1005
+    },
+    "test": {
+      "papers": 416,
+      "questions": 1459
+    }
+  },
+  "exclusions": {
+    "table_or_figure_only": "Audited and recorded separately from main text retrieval",
+    "unanswerable": "Scored under abstention negative protocol",
+    "unmapped_text": "Logged in evaluation audit report"
+  }
+}

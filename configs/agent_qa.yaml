@@ -3,3 +3,21 @@
 # Pin the shared subset, seed, rubric, B4 settings, prompt and schema
 # versions, budgets, and Gemini snapshot. Use primary_only and at most 8
 # original paragraphs per turn.
+
+benchmark:
+  dataset_name: "allenai/qasper"
+  subset_size: 50
+  seed: 42
+  eval_routing: "primary_only"
+
+model:
+  primary: "ag/gemini-3.8-flash-medium"
+
+limits:
+  max_parent_evidence: 8
+  max_llm_steps: 3
+  max_searches: 2
+  max_tool_calls: 4
+  max_input_tokens: 16000
+  max_output_tokens: 2400
+  turn_timeout_seconds: 30

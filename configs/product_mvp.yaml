@@ -6,3 +6,55 @@
 #
 # core/config.py loads connection information and credentials from the
 # server environment.
+
+app:
+  version: "0.1.0"
+  environment: "development"
+
+retrieval:
+  default_mode: "B4"
+  product_top_k: 5
+  sparse_candidates: 40
+  dense_candidates: 40
+  rrf_k: 60
+  rerank_candidates: 20
+  embedding_model: "intfloat/multilingual-e5-large"
+  reranker_model: "BAAI/bge-reranker-v2-m3"
+  max_passage_tokens: 400
+
+models:
+  primary: "ag/gemini-3.8-flash-low"
+  medium: "ag/gemini-3.8-flash-medium"
+  fallback: "ag/claude-sonnet-4-6"
+  high: "fpt/Qwen3.8-27B"
+
+limits:
+  max_body_bytes: 1048576
+  max_chunks: 400
+  max_tokens_per_paper: 80000
+  max_question_chars: 1024
+  max_history_turns: 6
+  turn_timeout_seconds: 120
+  gemini_timeout_seconds: 60
+  claude_timeout_seconds: 90
+  qwen_timeout_seconds: 90
+  max_llm_steps: 4
+  max_provider_attempts: 6
+  max_tool_calls: 6
+  max_searches: 3
+  max_parent_evidence: 24
+  max_input_tokens: 64000
+  max_output_tokens: 32768
+  max_final_answer_tokens: 16384
+
+quotas:
+  # Personal local installation: no artificial daily caps. Hosted deployments
+  # should set finite DAILY_* environment variables. Per-turn budgets still apply.
+  daily_new_indexes: -1
+  daily_agent_turns: -1
+  daily_semantic_retrievals: -1
+
+retention:
+  paper_inactivity_days: 7
+  run_retention_hours: 24
+  operational_metadata_days: 7
